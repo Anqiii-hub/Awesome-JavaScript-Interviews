@@ -1,6 +1,7 @@
 ## How does event delegation work?
 
-Event delegation makes use of two features of JavaScript events: event bubbling and the target element. When an event is triggered on an element, for example a mouse click on a button, the same event is also triggered on all of that element’s ancestors. This process is known as event bubbling. So in other words, When an event is fired from an element, the event will be bubbled up to its parent nodes.
+Event delegation makes use of two features of JavaScript events: event bubbling and the target element. 
+**Event bubbling**: When **an event is triggered on an element**, for example a mouse click on a button, **the same event is also triggered on all of that element’s ancestors**. This process is known as event bubbling. So in other words, When an event is fired from an element, the event will be bubbled up to its parent nodes.
 
 The event bubbles up from the originating element to the top of the DOM tree. The target element of any event is the originating element, the button in our example, and is stored in a property of the event object. The 'target', stays the same in the event object. Using event delegation it’s possible to add an event handler to an element, wait for an event to bubble up from a child element and easily determine from which element the event originated.
 
