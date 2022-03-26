@@ -1,13 +1,14 @@
 ## How does event delegation work?
 
 Event delegation makes use of two features of JavaScript events: event bubbling and the target element. 
+
 **Event bubbling**: When **an event is triggered on an element**, for example a mouse click on a button, **the same event is also triggered on all of that element’s ancestors**. This process is known as event bubbling. So in other words, When an event is fired from an element, the event will be bubbled up to its parent nodes.
 
-The event bubbles up from the originating element to the top of the DOM tree. The target element of any event is the originating element, the button in our example, and is stored in a property of the event object. The 'target', stays the same in the event object. Using event delegation it’s possible to add an event handler to an element, wait for an event to bubble up from a child element and easily determine from which element the event originated.
+The event bubbles up from the originating element to the top of the DOM tree. The target element of any event is the originating element, the button in our example, and is stored in a property of the event object. The 'target', stays the same in the event object. Using **event delegation** it’s possible to **add an event handler to an element**, **wait for an event to bubble up from a child element** and easily determine from which element the event originated.
 
-Using the target property, we can always keep track which element actually causes an event captured by its parent, and it can help us reduce the number of event handlers as we sometimes don't need to add event listeners for every element.
+Using the target property, we can always keep track which element actually causes an event captured by its parent, and it can help us **reduce the number of event handlers** as we sometimes don't need to add event listeners for every element.
 
-## What is the Event Propagation?
+## What is the Event Propagation? 
 
 Let’s start with event propagation. This is the blanket term for both event bubbling and event capturing. Consider the typical markup to build a list of linked images, for a thumbnails gallery for example:
 
